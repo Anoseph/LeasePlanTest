@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Garage List" icon-name="custom:custom19">
+        <div class="slds-m-around_medium" ongarageselect={handleGarageSelect}>
+            <template if:true={garages.data}>
+                <template for:each={garages.data} for:item="garage">
+                    <c-shop-list-item key={garage.Id} garage={garage}></c-shop-list-item>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>
